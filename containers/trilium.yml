@@ -1,0 +1,15 @@
+---
+version: '2.1'
+services:
+  trilium:
+    image: zadam/trilium
+    restart: unless-stopped
+    environment:
+      - TRILIUM_DATA_DIR=/home/node/trilium-data
+      - USER_UID=988 #whatever you want the uid to be
+      - USER_GID=988 #whatever you want the gid to be
+    ports:
+      - "8080:8080"
+    volumes:
+      - trilium:/home/node/trilium-data
+...

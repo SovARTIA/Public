@@ -1,0 +1,64 @@
+---
+version: '3'
+
+services:
+ vaultwarden:
+ image: vaultwarden/server:latest
+ environment:
+   - WEBSOCKET_ENABLED=true
+   - SIGNUPS_ALLOWED=false
+ restart: unless-stopped
+ expose:
+   - "3012"
+   - "8080"
+ volumes:
+   - /srv/vaultwarden:/data
+ networks:
+   - SovBridge
+
+networks:
+  SovBridge:
+     external: true
+...
+
+---
+# should be able to uncomment applicable lines.
+
+version: '3'
+
+services:
+ vaultwarden:
+  image: vaultwarden/server:latest
+  environment:
+   - TZ=America/Anchorage
+   - WEBSOCKET_ENABLED=true
+   - SIGNUPS_ALLOWED=false
+   - DOMAIN=https://pass.sovereigntyaffairs.com
+   - LOGIN_RATELIMIT_MAX_BURST=10
+   - LOGIN_RATELIMITE_SECONDS=60
+   - INVITATION_ORG_NAME=SovVault
+   - INVITATIONS_ALLOWED=true
+   - SIGNUPS_ALLOWED=false
+   - SIGNUPS_VERIFY=true
+   - SIGNUPS_VERIFY_RESEND_TIME=3600
+   - SIGNUPS_VERIFY_RESENT_LIMIT=6
+   - EMERGENCY_ACCESS_ALLOWED=true
+#<Signups using these email domains will be allowed to signup. Uncomment the line below to apply this option>
+#  - SIGNUPS_DOMAINS_WHITELIST=
+   - SENDS_ALLOWED=true
+   - WEB_VAULT_ENABLED=true
+   - ADMIN_TOKEN=7ojxp3D2f9C4Ewq7CYMziJeBCzwt2bUsKHQgveqh6AuFRJMLs2
+  restart: unless-stopped
+  ports:
+ ports:
+   - "3012:443"
+   - "8081:80"
+  volumes:
+   - /opt/vaultwarden/data:/data
+  networks:
+   - SovBridge
+
+networks:
+  SovBridge:
+     external: true
+...

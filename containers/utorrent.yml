@@ -1,0 +1,27 @@
+---
+version: '3'
+
+services:
+  utorrent:
+    container_name: utorrent-server
+    image: ekho/utorrent:latest
+    environment:
+     - PUID=1000
+     - PGID=1000
+     - webui=ng
+     - dir_autoload_delete=true
+    volumes:
+     - /opt/utorrent/data:/data
+     - /opt/utorrent/settings:/utorrent/settings
+    ports:
+     - 8080:8080
+     - 6881:6881
+     - 6881:6881/udp
+    restart: unless-stopped
+    logging:
+     driver: "json-file"
+     options:
+      max-size: "10m"
+      max-file: "3"
+
+...

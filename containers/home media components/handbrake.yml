@@ -1,0 +1,14 @@
+---
+version: '3'
+services:
+  handbrake:
+    container_name: handbrake
+    image: jlesage/handbrake
+    ports:
+      - "5800:5800"
+    volumes:
+      - /opt/handbrake/config:/config
+      - /home/bob/handbrake:/storage:ro
+      - /home/bob/handbrake/watch:/watch
+      - /home/bob/handbrake/output:/output
+...
