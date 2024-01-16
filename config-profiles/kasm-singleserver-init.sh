@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
+
 ##################SCRIPT CONFIG################
+#Set timezone to "America/Anchorage"
+timedatectl set-timezone America/Anchorage
+
 # Enable error handling
 set -e
 
