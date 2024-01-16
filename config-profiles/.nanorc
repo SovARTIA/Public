@@ -1,4 +1,4 @@
-## Sample GNU nano configuration file (.nanorc)
+## SovARTIA preferred NANO editor settings (.nanorc)
 
 # Enable syntax highlighting
 include "/usr/share/nano/*.nanorc"
