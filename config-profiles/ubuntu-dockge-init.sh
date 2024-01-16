@@ -3,7 +3,7 @@
 #Set timezone to "America/Anchorage"
 timedatectl set-timezone America/Anchorage
 
-#This phase will install the Volian Repos for Nala install
+#This phase will install the Volian Repos for Nala install and update the system packages
 echo "deb http://deb.volian.org/volian/ scar main" > /etc/apt/sources.list.d/volian-archive-scar-unstable.list
 
 wget -qO - https://deb.volian.org/volian/scar.key > /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
@@ -12,15 +12,14 @@ apt update
 
 DEBIAN_FRONTEND=noninteractive apt upgrade -y
 
-apt install nala -y
+DEBIAN_FRONTEND=noninteractive apt install nala ca-certificates curl gnupg -y
 #This phase will install docker using the official docker repos
-apt install ca-certificates curl gnupg -y
 
 install -m 0755 -d /etc/apt/keyrings
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
+chmod a+r /etc/apt/keyrings/docker.gpg
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -29,7 +28,7 @@ echo \
 
 apt update
 
-apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+DEBIAN_FRONTEND=noninteractive apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 systemctl start docker
 
