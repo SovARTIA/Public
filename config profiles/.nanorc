@@ -1,0 +1,55 @@
+## Sample GNU nano configuration file (.nanorc)
+
+# Enable syntax highlighting
+include "/usr/share/nano/*.nanorc"
+
+# Set default text wrapping at 72 columns
+set nowrap
+
+# Display a "scrollbar" on the righthand side of the edit window. It shows the position of the viewport in the buffer and how much of the buffer is covered by the viewport.
+set indicator
+
+# Scroll the buffer contents per half-screen instead of per line
+set jumpyscrolling
+
+# Enable mouse support
+set mouse
+
+# Display line numbers to the left of the text
+set linenumbers
+
+# Use auto-indentation
+set autoindent
+
+# Highlight the current line
+set softwrap
+
+# Set tab size to 4 spaces
+set tabsize 4
+
+# Convert typed tabs to spaces
+set tabstospaces
+
+# Backup files before saving
+set backup
+
+# Create and use .save files instead of overwriting files
+set tempfile
+
+# Set the backup directory
+set backupdir "~/.nano_backups/"
+
+# Set the search history file
+set historylog "~/.nano_history"
+
+# Use this regex for a case-sensitive search
+set casesensitive
+
+# Use this regex for a whole-word search
+set matchbrackets "(<|>|[|]|{|}|\"|')"
+
+# Use minibar
+set minibar
+
+#Put the cursor on the highlighted item in the file browser, and show the cursor in the help viewer, to aid braille users and people with poor vision
+set showcursor
