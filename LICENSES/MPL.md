@@ -1,5 +1,6 @@
 # Mozilla Public License
 Version 2.0
+*Copyright © 2024 Sovereignty ARTIA*
 
 1. Definitions
 
