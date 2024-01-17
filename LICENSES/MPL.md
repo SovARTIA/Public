@@ -1,5 +1,5 @@
 # Mozilla Public License
-Version 2.0
+Version 2.0 <br>
 *Copyright © 2024 Sovereignty ARTIA*
 
 1. Definitions
