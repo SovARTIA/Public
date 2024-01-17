@@ -4,7 +4,6 @@
 
 ################### LANd DOCKGE INSTALL SCRIPT ####################################
 
-######
 #Set timezone to "America/Anchorage"
 timedatectl set-timezone America/Anchorage
 
