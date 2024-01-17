@@ -1,4 +1,4 @@
-# SOVEREIGNTY ARTIA DOCUMENTATION README/DISCLAIMER
+# SOVEREIGNTY ARTIA README/DISCLAIMER
 
 Sovereignty A.R.T.I.A. (Access Retention Transmission Interception Acquisition) is a decentralized platform for personal and business users to facilitate their digital sovereignty. Users will do this by utilizing the resources found in this repository according to their own use cases and threat models.
 
