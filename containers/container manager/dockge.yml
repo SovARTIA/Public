@@ -1,0 +1,27 @@
+#/!*!*---->This Source Code Form is subject to the terms of the The BSD 3-Clause License. If a copy of the license was not distributed with this file, You can obtain one at https://github.com/SovARTIA/Public/blob/main/LICENSES/BSD-3-Clause.md.<----*!*!\
+
+---
+version: "3.8"
+services:
+  dockge:
+    image: louislam/dockge:1
+    restart: unless-stopped
+    ports:
+      # Host Port : Container Port
+      - 5001:5001
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/app/data
+        
+      # If you want to use private registries, you need to share the auth file with Dockge:
+      # - /root/.docker/:/root/.docker
+
+      # Stacks Directory
+      # ⚠️ READ IT CAREFULLY. If you did it wrong, your data could end up writing into a WRONG PATH.
+      # ⚠️ 1. FULL path only. No relative path (MUST)
+      # ⚠️ 2. Left Stacks Path === Right Stacks Path (MUST)
+      - /root/.stacks:/root/.stacks
+    environment:
+      # Tell Dockge where is your stacks directory
+      - DOCKGE_STACKS_DIR=/root/.stacks
+...
