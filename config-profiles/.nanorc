@@ -57,3 +57,5 @@ set minibar
 
 #Put the cursor on the highlighted item in the file browser, and show the cursor in the help viewer, to aid braille users and people with poor vision
 set showcursor
+
+#/#/EOF\#\#

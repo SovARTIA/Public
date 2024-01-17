@@ -68,3 +68,5 @@ cd /root/dockge && docker compose up -d
 #This phase will reboot the system
 
 systemctl reboot
+
+#/#/EOF\#\#
