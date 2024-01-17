@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-################### LANd DOCKGE INSTALL SCRIPT ####################################
-#!!---->This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.<----!!
+#/!*!*---->This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.<----*!*!\
 
-######
+################### LANd KASM SINGLE SERVER INSTALL SCRIPT ####################################
 
 ##################SCRIPT CONFIG################
 #Set timezone to "America/Anchorage"
@@ -82,3 +81,5 @@ curl -O https://kasm-static-content.s3.amazonaws.com/kasm_release_1.14.0.3a7abb.
 tar -xf kasm_release_1.14.0.3a7abb.tar.gz
 
 DEBIAN_FRONTEND=noninteractive bash kasm_release/install.sh --accept-eula --swap-size 4096
+
+#/#/EOF\#\#
