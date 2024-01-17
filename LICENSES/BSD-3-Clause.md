@@ -1,6 +1,6 @@
-BSD 3-CLAUSE OPEN SOURCE LICENSE
+# BSD 3-CLAUSE OPEN SOURCE LICENSE
 
-    Copyright © 2024 Sovereignty ARTIA
+Copyright © 2024 Sovereignty ARTIA
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
