@@ -6,7 +6,7 @@
 
 ##################SCRIPT CONFIG################
 #Set timezone to "America/Anchorage"
-timedatectl set-timezone America/Anchorage
+timedatectl set-timezone America/Anchorage #set to current timezone
 
 # Enable error handling
 set -e
@@ -22,13 +22,6 @@ handle_error() {
 # Trap errors with the error handler
 trap 'handle_error $LINENO "$BASH_COMMAND"' ERR
 
-# Define a function that prints a message when the script exits
-function on_exit {
-  echo "AN ERROR HAS OCCURED DURING THE UPDATE AND INSTALL PROCESS OF KASM, PLEASE CHECK THE \"error.log\" file for details."
-}
-
-# Set a trap to call the function when the script exits
-trap on_exit EXIT
 ##############################################
 #This phase will install the Volian Repos for Nala install
 echo "deb http://deb.volian.org/volian/ scar main" > /etc/apt/sources.list.d/volian-archive-scar-unstable.list
