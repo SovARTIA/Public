@@ -7,7 +7,7 @@ services:
   duplicati:
     image: lscr.io/linuxserver/duplicati:latest
     container_name: duplicati
-    env_file: ./.env
+    env_file: .env
     volumes:
       - /opt/duplicati/config/config:/config
       - /opt/duplicati/backups:/backups
