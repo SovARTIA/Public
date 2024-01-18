@@ -1,0 +1,14 @@
+#/!*!*---->This Source Code Form is subject to the terms of the The BSD 3-Clause License. If a copy of the license was not distributed with this file, You can obtain one at https://github.com/SovARTIA/Public/blob/main/LICENSES/BSD-3-Clause.md.<----*!*!\
+
+---
+version: '2.1'
+services:
+  trilium:
+    image: zadam/trilium
+    restart: unless-stopped
+    environment:
+    ports:
+      - "8080:8080"
+    volumes:
+      - trilium:/home/node/trilium-data
+...
