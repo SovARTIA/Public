@@ -77,6 +77,7 @@ Each Contributor hereby grants You a world-wide, royalty-free, non-exclusive lic
 2.2. Effective Date
 
 The licenses granted in Section 2.1 with respect to any Contribution become effective for each Contribution on the date the Contributor first distributes such Contribution.
+
 2.3. Limitations on Grant Scope
 
 The licenses granted in this Section 2 are the only rights granted under this License. No additional rights or licenses will be implied from the distribution or licensing of Covered Software under this License. Notwithstanding Section 2.1(b) above, no patent license is granted by a Contributor:
@@ -88,15 +89,19 @@ The licenses granted in this Section 2 are the only rights granted under this Li
 > under Patent Claims infringed by Covered Software in the absence of its Contributions.
 
 This License does not grant any rights in the trademarks, service marks, or logos of any Contributor (except as may be necessary to comply with the notice requirements in Section 3.4).
+
 2.4. Subsequent Licenses
 
 No Contributor makes additional grants as a result of Your choice to distribute the Covered Software under a subsequent version of this License (see Section 10.2) or under the terms of a Secondary License (if permitted under the terms of Section 3.3).
+
 2.5. Representation
 
 Each Contributor represents that the Contributor believes its Contributions are its original creation(s) or it has sufficient rights to grant the rights to its Contributions conveyed by this License.
+
 2.6. Fair Use
 
 This License is not intended to limit any rights You have under applicable copyright doctrines of fair use, fair dealing, or other equivalents.
+
 2.7. Conditions
 
 Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted in Section 2.1.
