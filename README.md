@@ -42,4 +42,4 @@ Please read our Code of Conduct and Contribution Guidelines before making a cont
 
 ## License
 
-This repo contains various licenses that are contained in the applicable folder. If you have any questions, please feel to ask.
+This repo contains various licenses that are contained in the applicable folder. There is also a collection of all licenses [here](https://github.com/SovARTIA/Public/tree/2946ea60f813c1d7dec43a04dee48647cb283e59/LICENSES) If you have any questions, please feel to ask.
