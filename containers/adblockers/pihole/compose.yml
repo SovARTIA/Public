@@ -1,0 +1,26 @@
+# Author: Sovereignty A.R.T.I.A.
+# Description: Adguard Home docker compose file.
+# License: BSD 3-Clause © 2024 | (https://github.com/SovARTIA/Public/blob/main/LICENSES/BSD-3-Clause.md)
+
+---
+version: "3"
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports: # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+    env_file:
+      - .env
+    # Volumes store your data between container upgrades
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+    restart: unless-stopped
+...
+
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/

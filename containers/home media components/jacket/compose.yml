@@ -1,0 +1,20 @@
+# Author: Sovereignty A.R.T.I.A.
+# Description: Jackett docker compose file.
+# License: BSD 3-Clause © 2024 | (https://github.com/SovARTIA/Public/blob/main/LICENSES/BSD-3-Clause.md)
+
+---
+version: "2.1"
+services:
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    container_name: jackett
+    env_file:
+      - .env
+    volumes:
+      - /path/to/data:/config
+      - /path/to/blackhole:/downloads
+    ports:
+      - 9117:9117
+    restart: unless-stopped
+
+...
