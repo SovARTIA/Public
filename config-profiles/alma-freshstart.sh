@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-#/!*!*---->This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. © 2024 | Sovereignty ARTIA. If a copy of the MPL was not distributed with this file, You can obtain one at https://github.com/SovARTIA/Public/blob/a2d5042a7eb7b3e5302b51356f9e4d1fcec14459/LICENSES/MPL.md.<----*!*!\
-
-#Set timezone to "America/Anchorage"
-timedatectl set-timezone America/Anchorage #set to current timezone
+# Author: Sovereignty A.R.T.I.A.
+# Description: AlmaLinux fresh install script - update and start Cockpit.
+# License: MPL, v2.0 | (https://github.com/SovARTIA/Public/blob/a2d5042a7eb7b3e5302b51356f9e4d1fcec14459/LICENSES/MPL.md)
 
 # Enable error handling
 set -e

@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-#/!*!*---->This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. © 2024 | Sovereignty ARTIA. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.<----*!*!\
+# Author: Sovereignty A.R.T.I.A.
+# Description: Kasm single server install automation script.
+# License: MPL, v2.0 © 2024 | (https://github.com/SovARTIA/Public/blob/a2d5042a7eb7b3e5302b51356f9e4d1fcec14459/LICENSES/MPL.md)
 
-################### LANd KASM SINGLE SERVER INSTALL SCRIPT ####################################
-
-##################SCRIPT CONFIG################
-#Set timezone to "America/Anchorage"
-timedatectl set-timezone America/Anchorage #set to current timezone
+## SCRIPT CONFIG 
 
 # Enable error handling
 set -e
@@ -22,8 +20,8 @@ handle_error() {
 # Trap errors with the error handler
 trap 'handle_error $LINENO "$BASH_COMMAND"' ERR
 
-##############################################
-#This phase will install the Volian Repos for Nala install
+## This phase will install the Volian Repos for Nala install
+
 echo "deb http://deb.volian.org/volian/ scar main" > /etc/apt/sources.list.d/volian-archive-scar-unstable.list
 
 wget -qO - https://deb.volian.org/volian/scar.key > /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
@@ -34,7 +32,8 @@ DEBIAN_FRONTEND=noninteractive apt upgrade -y
 
 DEBIAN_FRONTEND=noninteractive apt install nala ca-certificates curl gnupg -y
 
-#This phase will install docker using the official docker repos
+## This phase will install docker using the official docker repos
+
 install -m 0755 -d /etc/apt/keyrings
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -50,7 +49,8 @@ apt update
 
 DEBIAN_FRONTEND=noninteractive apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-# List of services to restart
+## List of services to restart
+
 services=("cron" "dbus" "irqbalance" "ModemManager" "multipathd" "networkd-dispatcher" "packagekit" "polkit" "rsyslog" "snapd" "ssh" "systemd-logind" "systemd-timesyncd" "systemd-udevd" "udisks2" "unattended-upgrades")
 
 for service in "${services[@]}"
