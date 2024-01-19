@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Description: SovARTIA preferred NanoRC custom Settings
+# Description: Sovereignty A.R.T.I.A. preferred NanoRC custom Settings
 
 # Enable syntax highlighting
 include "/usr/share/nano/*.nanorc"

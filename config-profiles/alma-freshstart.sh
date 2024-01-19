@@ -1,8 +1,20 @@
 #!/usr/bin/env bash
 
-# Author: Sovereignty A.R.T.I.A.
+# Copyright 2024 Sovereignty A.R.T.I.A.
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+#    http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Description: AlmaLinux fresh install script - update and start Cockpit.
-# License: MPL, v2.0 | (https://github.com/SovARTIA/Public/blob/a2d5042a7eb7b3e5302b51356f9e4d1fcec14459/LICENSES/MPL.md)
 
 # Enable error handling
 set -e

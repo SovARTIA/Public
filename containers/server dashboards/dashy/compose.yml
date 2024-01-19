@@ -1,7 +1,10 @@
-##/!*!*---->This Source Code Form is subject to the terms of the The BSD 3-Clause License © 2024 | Sovereignty ARTIA. If a copy of the license was not distributed with this file, You can obtain one at https://github.com/SovARTIA/Public/main/LICENSES/BSD-3-Clause.md.<----*!*!\
+# Author: Sovereignty A.R.T.I.A.
+# Description: Dashy docker compose file.
+# License: BSD 3-Clause © 2024 | (https://github.com/SovARTIA/Public/blob/main/LICENSES/BSD-3-Clause.md)
+
+# Project Github: https://github.com/Lissy93/dashy
 
 ---
-
 # Welcome to Dashy! To get started, run `docker compose up -d`
 # You can configure your container here, by modifying this file
 version: "3.8"
