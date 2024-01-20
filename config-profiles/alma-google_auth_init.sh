@@ -19,7 +19,7 @@
 ## Force verification during 'su' operations
 echo "auth            required        pam_google_authenticator.so" >> /etc/pam.d/su
 
-## Force verfication during 'sudo' optations
+## Force verfication during 'sudo' operations
 sed -i '2i\auth       required     pam_google_authenticator.so' /etc/pam.d/sudo
 
 #/#/EOF\#\#
