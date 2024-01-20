@@ -13,7 +13,8 @@ services:
       - '443:443'
     networks:
       - sovbridge
-    env_file: ./.env
+    env_file: 
+      - .env
     volumes:
       - /opt/nginx/data:/data
       - /opt/nginx/letsencrypt:/etc/letsencrypt
@@ -26,7 +27,7 @@ services:
     restart: unless-stopped
     env_file: ./.env
     volumes:
-      - /opt/mysql/nginx/data:/var/lib/mysql
+      - /opt/nginx/mysql/data:/var/lib/mysql
     networks:
      - sovbridge 
 networks:
