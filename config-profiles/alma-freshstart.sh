@@ -14,7 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Description: AlmaLinux fresh install script - update and start Cockpit.
+# Description: AlmaLinux fresh install script - install google authenticator, 
+#              update system and start Cockpit.
 
 # Enable error handling
 set -e
@@ -30,7 +31,7 @@ handle_error() {
 # Trap errors with the error handler
 trap 'handle_error $LINENO "$BASH_COMMAND"' ERR
 
-######### THIS SCRIPT WILL UPDATE AND UPGRADE THE SYSTEM THEN RESTART THE SYSTEM #####
+## THIS SCRIPT WILL UPDATE AND UPGRADE THE SYSTEM THEN RESTART THE SYSTEM #####
 
 echo \
 "fastestmirror=True
@@ -40,11 +41,17 @@ colors=always" >> /etc/dnf/dnf.conf
 
 dnf update -y --skip-broken --best
 
+dnf install epel-release -y
+
+crb enable
+
+dnf install google-authenticator -y
+
 dnf clean all
 
 dnf autoremove -y
 
-#### Enable Cockpit | more information on cockpit -----------> 
+## Enable Cockpit | more information on cockpit -----------> https://cockpit-project.org/documentation
 
 systemctl enable --now cockpit.socket
 
