@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Description: Kasm single server install automation script.
+# Description: Nala + Kasm single server install automation script.
 
 ## SCRIPT CONFIG 
 

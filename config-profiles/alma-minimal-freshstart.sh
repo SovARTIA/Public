@@ -37,15 +37,18 @@ echo \
 max_parallel_downloads=20
 defaultyes=True
 colors=always" >> /etc/dnf/dnf.conf
+
 # update the system
 dnf update -y --skip-broken --best
 
 # Install Cockpit
 dnf install cockpit cockpit-doc cockpit-packagekit cockpit-podman cockpit-storaged epel-release -y
+
 # enable extended repo
 crb enable
 
 dnf install google-authenticator -y
+
 # clean any cached files
 dnf clean all
 
