@@ -14,7 +14,7 @@ services:
     networks:
       - sovbridge
     env_file: 
-      - .env
+      - stack.env
     volumes:
       - /opt/nginx/data:/data
       - /opt/nginx/letsencrypt:/etc/letsencrypt
@@ -25,7 +25,8 @@ services:
   nginxdb:
     image: 'jc21/mariadb-aria:latest'
     restart: unless-stopped
-    env_file: ./.env
+    env_file:
+      - stack.env
     volumes:
       - /opt/nginx/mysql/data:/var/lib/mysql
     networks:
