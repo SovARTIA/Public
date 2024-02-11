@@ -82,7 +82,7 @@ dnf clean all
 dnf autoremove -y
 
 # start privileged ports at 80
-sudo sysctl net.ipv4.ip_unprivileged_port_start=80
+sudo sysctl net.ipv4.ip_unprivileged_port_start=53
 
 # restart the system
 systemctl reboot
